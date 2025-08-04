@@ -272,6 +272,26 @@
 <script>
   AOS.init();
 </script>
+  <script>
+  const navbar = document.getElementById("home-navbar");
+
+  function toggleNavbarVisibility() {
+    const homeSection = document.getElementById("home");
+    const homeTop = homeSection.offsetTop;
+    const homeHeight = homeSection.offsetHeight;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition >= homeTop && scrollPosition < homeTop + homeHeight) {
+      navbar.style.display = "block";
+    } else {
+      navbar.style.display = "none";
+    }
+  }
+
+  // Initial check + on scroll
+  window.addEventListener("scroll", toggleNavbarVisibility);
+  window.addEventListener("load", toggleNavbarVisibility);
+  </script>
 
 </body>
 </html>
