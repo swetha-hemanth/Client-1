@@ -49,6 +49,20 @@
     font-family: 'Merriweather', serif;
   }
 </style>
+  <!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+  }
+</style>
 </head>
 <body class="text-white bg-black">
 
@@ -148,10 +162,48 @@
   </div>
 </section>
 
-  <section id="gallery" class="min-h-screen p-10 text-center">
-    <h2 class="text-3xl font-bold text-yellow-400">Gallery</h2>
-    <p class="mt-4 text-gray-300">[Your Gallery Section Content Here]</p>
-  </section>
+<!-- Room Pricing Section -->
+<section class="min-h-screen bg-cover bg-center flex items-center justify-center px-4 py-10" style="background-image: url('your-image.jpg');">
+  <div class="bg-gray-800 bg-opacity-60 backdrop-blur-md rounded-2xl p-8 max-w-3xl w-full text-white shadow-xl">
+    <h1 class="text-4xl font-bold mb-6 text-center font-[Playfair]">Room Pricing</h1>
+
+    <h2 class="text-2xl font-semibold mt-4 mb-2">Weekday Rates</h2>
+    <ul class="list-disc list-inside mb-4">
+      <li>Single Person: ₹600</li>
+      <li>Standard Room (2 persons): ₹700</li>
+      <li>Deluxe Room (2 persons): ₹900</li>
+      <li>Triple Bedroom (4 persons): ₹1000</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-4 mb-2">Weekend Rates</h2>
+    <ul class="list-disc list-inside mb-4">
+      <li>Single Person: ₹700</li>
+      <li>Standard Room (2 persons): ₹900</li>
+      <li>Deluxe Room (2 persons): ₹1200</li>
+      <li>Triple Bedroom (4 persons): ₹1400</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-4 mb-2">Seasonal Pricing (Apr 1 – Jun 10)</h2>
+    <ul class="list-disc list-inside mb-4">
+      <li>Standard Room (1 person): ₹1000</li>
+      <li>Standard Room (2 persons): ₹1200</li>
+      <li>Deluxe Room (2 persons): ₹1500</li>
+      <li>Triple Bedroom (4 persons): ₹1800</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-4 mb-2">Peak Weekends / Holidays</h2>
+    <ul class="list-disc list-inside mb-6">
+      <li>Standard Room (1 person): ₹1500</li>
+      <li>Deluxe Room (2 persons): ₹2300</li>
+      <li>Triple Bedroom (4 persons): ₹2500</li>
+    </ul>
+
+    <div class="text-lg font-semibold">
+      🚐 <strong>Tour Package:</strong> Ooty, Coonoor, Filmy Chakkar<br>
+      Vehicle: Swaraj Mazda Van
+    </div>
+  </div>
+</section>
 
   <section id="pricing" class="min-h-screen p-10 text-center">
     <h2 class="text-3xl font-bold text-yellow-400">Pricing</h2>
