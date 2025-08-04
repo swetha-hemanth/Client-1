@@ -35,6 +35,19 @@
   .font-playfair {
     font-family: 'Playfair Display', serif;
   }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Font Classes -->
+<style>
+  .lato-heading {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .merri-text {
+    font-family: 'Merriweather', serif;
+  }
 </style>
 </head>
 <body class="text-white bg-black">
@@ -98,24 +111,27 @@
   </section>
 
   <!-- Placeholder for Other Sections -->
-  <!-- 45 Years of Excellence Section with Background -->
-<section class="relative w-full bg-cover bg-center bg-no-repeat py-20 sm:py-24 text-white" style="background-image: url('image-1.png');">
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  
+<!-- ABOUT US SECTION WITH BACKGROUND IMAGE -->
+<section class="relative w-full min-h-screen flex items-center justify-center px-6 py-16 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('image-1.png');"></div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 text-center">
-    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-wide font-playfair mb-4">
-      Celebrating 45 Years of Trusted Hospitality
-    </h2>
-    <p class="text-sm sm:text-base font-light font-playfair leading-relaxed">
-      Since 1980, <strong class="text-yellow-400">Raja Lodge Ooty</strong> has proudly served travelers, families, and tourists from across the world.
-      Nestled in the heart of Ooty, our lodge has been a part of thousands of memorable journeys.
+  <!-- Overlay for readability -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+
+  <!-- Content -->
+  <div class="relative z-20 max-w-5xl text-white text-center sm:text-left backdrop-blur-sm p-6 sm:p-12 rounded-xl">
+    <h2 class="text-4xl sm:text-5xl mb-6 text-yellow-400 tracking-wide lato-heading">About Raja Lodge, Ooty</h2>
+    
+    <p class="text-sm sm:text-base leading-relaxed merri-text">
+      Established in the heart of Ooty over <strong>45 years ago</strong>, Raja Lodge is one of the oldest and most trusted stays in the Queen of Hills. For decades, we’ve been a favorite among families, couples, and travelers looking for a peaceful, affordable, and convenient place to stay.
     </p>
-    <p class="mt-4 text-sm sm:text-base font-light font-playfair leading-relaxed">
-      Our commitment to comfort, cleanliness, and care is what sets us apart. With decades of trust, we’ve grown into more than a place to stay — we’re a legacy of heartfelt service in the Queen of Hills.
+    <p class="mt-4 text-sm sm:text-base leading-relaxed merri-text">
+      Our lodge reflects a blend of <strong>traditional hospitality</strong> and comfort with modern simplicity. Whether you're here for a honeymoon, vacation, or weekend escape, we ensure a clean, safe, and friendly environment for all our guests.
     </p>
-    <p class="mt-4 text-sm sm:text-base font-light italic">
-      “Your comfort is our legacy — for over four decades.”
+    <p class="mt-4 text-sm sm:text-base leading-relaxed merri-text">
+      With our long-standing reputation, central location, and personal service, Raja Lodge continues to be the <strong>preferred choice</strong> for those who want to experience Ooty like a local — with the warmth of home and the beauty of the hills right outside your door.
     </p>
   </div>
 </section>
