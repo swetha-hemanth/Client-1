@@ -134,9 +134,54 @@
 </section>
 
 <!-- Gallery Placeholder -->
-<section id="gallery" class="min-h-screen flex items-center justify-center bg-black text-white">
-  <h2 class="text-3xl text-yellow-300">[Gallery Coming Soon]</h2>
+<section class="relative w-full h-screen overflow-hidden">
+  <!-- Auto Scroll Image Carousel -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden">
+    <div class="flex animate-scrollGallery w-[900%] h-full">
+      <!-- Repeat your images -->
+      <img src="https://i.ibb.co/TDPg8SX3/IMG-20250731-WA0005-1.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/M5hnTVn0/IMG-20250731-WA0024.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/V0qw9X6p/IMG-20250731-WA0022.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/qhkQYFB/IMG-20250731-WA0021.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/tpxXjzGZ/IMG-20250731-WA0019.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/W4TyC5pD/IMG-20250731-WA0018.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/fVVykj4h/IMG-20250731-WA0016.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/vx28jkm1/IMG-20250731-WA0015.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+      <img src="https://i.ibb.co/LKxRjv5/IMG-20250731-WA0014.jpg" class="object-cover w-[100vw] h-full opacity-40" />
+    </div>
+  </div>
+
+  <!-- Text Overlay -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 bg-black/40">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4 animate-fadeSlide">🖤 Welcome to Raja Lodge Ooty</h2>
+    <p class="text-lg md:text-2xl animate-fadeSlide delay-500">Your comfort stay in the Queen of Hills 🌲</p>
+  </div>
 </section>
+
+<!-- TailwindCSS Animation -->
+<style>
+  @keyframes scrollGallery {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-800%); }
+  }
+  .animate-scrollGallery {
+    animation: scrollGallery 60s linear infinite;
+  }
+
+  @keyframes fadeSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  .animate-fadeSlide {
+    animation: fadeSlide 1s ease forwards;
+  }
+</style>
 
 <!-- Pricing Section -->
 <section id="pricing" class="min-h-screen bg-cover bg-center flex items-center justify-center px-4 py-10" style="background-image: url('image-4.png');">
@@ -267,6 +312,7 @@
   });
 </script>
 <!-- Guidelines Placeholder -->
+  
 <section class="bg-black py-10 px-4 sm:px-8">
   <div class="max-w-3xl mx-auto border-2 border-green-400 rounded-xl shadow-lg p-6 sm:p-10">
 
