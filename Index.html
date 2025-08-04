@@ -4,142 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animation CDN -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
     .gold-text {
-      color: gold;
-      font-family: 'Georgia', serif;
-      font-weight: bold;
+      color: #FFD700;
+      font-family: 'Cinzel', serif;
     }
 
-    body {
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .page-border {
-      border: 4px solid white;
-      max-width: 480px;
-      margin: auto;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    nav a {
-      display: flex;
-      align-items: center;
+    .section {
+      min-height: 100vh;
+      padding: 4rem 1rem;
     }
   </style>
 </head>
-<body class="bg-black text-white relative">
+<body class="bg-black text-white">
 
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
-    <source src="InShot_20250804_105620824.mp4" type="video/mp4" />
-  </video>
-
-  <div class="page-border relative z-10">
-
-    <!-- Navbar -->
-    <nav class="flex flex-col sm:flex-row justify-between items-center px-4 py-2 bg-transparent text-white text-sm sm:text-base">
-      <div class="font-bold">🌟 Raja Lodge</div>
-      <div class="flex flex-wrap justify-center space-x-4 mt-2 sm:mt-0 text-xs sm:text-sm">
+  <!-- Navbar -->
+  <header class="text-white w-full px-4 py-3 text-center">
+    <nav class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-base font-semibold">
+      <div class="flex space-x-3 text-sm sm:text-base">
         <a href="#home">🏠 Home</a>
-        <a href="#about">📖 About</a>
+        <a href="#about">ℹ️ About</a>
         <a href="#gallery">🖼️ Gallery</a>
         <a href="#pricing">💰 Pricing</a>
+      </div>
+      <div class="flex space-x-3 text-sm sm:text-base">
         <a href="#booking">📝 Booking</a>
-        <a href="#review">🌟 Review</a>
-        <a href="#guidelines">📜 Guidelines</a>
+        <a href="#review">🌟 Reviews</a>
+        <a href="#guidelines">📌 Guidelines</a>
         <a href="#contact">📞 Contact</a>
       </div>
     </nav>
+  </header>
 
-    <!-- Home Section -->
-    <section id="home" class="text-center py-10 px-4">
-      <!-- Logo -->
-      <div class="flex justify-center mb-4" data-aos="fade-down">
-        <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-24 h-24 rounded-full border-4 border-white">
-      </div>
+  <!-- HOME -->
+  <section id="home" class="relative w-full h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="InShot_20250804_105620824.mp4" type="video/mp4" />
+    </video>
 
-      <!-- Welcome Text -->
-      <h1 class="text-3xl sm:text-4xl gold-text" data-aos="fade-up">Welcome to RAJA LODGE</h1>
+    <!-- Logo -->
+    <div class="mt-16 mb-4">
+      <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-32 h-32 rounded-full border-4 border-white mx-auto" />
+    </div>
 
-      <!-- Welcome Quote -->
-      <p class="mt-2 text-white text-lg italic" data-aos="fade-up" data-aos-delay="100">
-        “Your peaceful retreat in the heart of Ooty.<br>Experience warmth, comfort, and tradition.”
-      </p>
+    <!-- Welcome Text -->
+    <h1 class="text-4xl sm:text-5xl font-bold gold-text mt-2">Welcome to RAJA LODGE</h1>
 
-      <!-- Buttons -->
-      <div class="mt-6 flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
-        <a href="tel:+919843830181" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full shadow-lg transition-all duration-300">
-          📞 Call Now
-        </a>
-        <a href="https://wa.me/919843830181" target="_blank" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full shadow-lg transition-all duration-300">
-          💬 WhatsApp
-        </a>
-      </div>
-    </section>
+    <!-- Quote -->
+    <p class="mt-4 text-lg sm:text-xl px-4">“Experience comfort in the heart of the Queen of Hills.”<br>“Where every stay becomes a cherished memory.”</p>
 
-    <!-- About Section -->
-    <section id="about" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-center">About Us</h2>
-      <p class="text-center">
-        Raja Lodge has been serving happy guests in Ooty for over 20 years. With a deep-rooted legacy of hospitality, we promise a cozy stay surrounded by nature.
-      </p>
-    </section>
+    <!-- Buttons -->
+    <div class="mt-6 flex space-x-4" data-aos="fade-up" data-aos-delay="200">
+      <a href="tel:+919843830181" class="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-full shadow-lg transition-all duration-300">
+        📞 Call Now
+      </a>
+      <a href="https://wa.me/919843830181" target="_blank" class="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-full shadow-lg transition-all duration-300">
+        💬 WhatsApp
+      </a>
+    </div>
+  </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-10 px-4 bg-gray-100 text-black" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-center">Gallery</h2>
-      <p class="text-center">[Insert images here]</p>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="section bg-cover bg-center" style="background-image: url('your-about-bg.jpg');">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold gold-text mb-4">About Us</h2>
+      <p class="text-lg">Raja Lodge Ooty has been serving guests for over 20 years with warmth and love. Nestled in the heart of the Queen of Hills, we bring you comfort and serenity in every stay.</p>
+    </div>
+  </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-center">Pricing</h2>
-      <p class="text-center">[Add pricing table here]</p>
-    </section>
+  <!-- GALLERY (copy-paste format for other sections) -->
+  <section id="gallery" class="section bg-cover bg-center" style="background-image: url('your-gallery-bg.jpg');">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold gold-text mb-4">Gallery</h2>
+      <p class="text-lg">View moments from our beautiful lodge and happy guests who visited Ooty.</p>
+    </div>
+  </section>
 
-    <!-- Booking Section -->
-    <section id="booking" class="py-10 px-4 bg-gray-100 text-black" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-center">Booking</h2>
-      <p class="text-center">[Insert booking form or details]</p>
-    </section>
+  <!-- PRICING -->
+  <section id="pricing" class="section bg-cover bg-center" style="background-image: url('your-pricing-bg.jpg');">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold gold-text mb-4">Pricing</h2>
+      <p class="text-lg">We offer the best rates in town with the highest comfort. Contact us for seasonal offers.</p>
+    </div>
+  </section>
 
-    <!-- Review Section -->
-    <section id="review" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-center">Reviews</h2>
-      <p class="text-center">[Add testimonials here]</p>
-    </section>
+  <!-- REPEAT THIS FORMAT FOR Booking, Review, Guidelines, Contact -->
 
-    <!-- Guidelines Section -->
-    <section id="guidelines" class="py-10 px-4 bg-gray-100 text-black" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-center">Guidelines</h2>
-      <p class="text-center">[Add stay rules and tips]</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-center">Contact Us</h2>
-      <p class="text-center">
-        📞 +91 98438 30181<br>
-        📧 rajalodgeooty@example.com
-      </p>
-    </section>
-
-  </div>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-
 </body>
 </html>
