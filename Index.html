@@ -27,25 +27,29 @@
 <body class="text-white bg-black">
 
   <!-- Navigation Bar -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-sm shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between text-white">
-      <!-- Line 1: Logo + Name -->
-      <div class="flex items-center space-x-3">
-        <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-white" />
-        <span class="text-xl font-semibold tracking-wider">RAJA LODGE</span>
-      </div>
-
-      <!-- Line 2: Menu Links -->
-      <div class="flex space-x-6 mt-2 md:mt-0 text-sm md:text-base">
-        <a href="#home" class="hover:text-yellow-400 transition">Home</a>
-        <a href="#about" class="hover:text-yellow-400 transition">About</a>
-        <a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a>
-        <a href="#pricing" class="hover:text-yellow-400 transition">Pricing</a>
-        <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
-      </div>
+<nav class="w-full fixed top-0 z-50 bg-black bg-opacity-50 text-white px-4 py-2 shadow-md">
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+    <!-- Line 1 -->
+    <div class="flex justify-between items-center w-full sm:w-auto">
+      <div class="text-lg sm:text-xl font-bold text-yellow-400 tracking-wide">RAJA LODGE OOTY</div>
+      <button class="sm:hidden text-white focus:outline-none">
+        ☰
+      </button>
     </div>
-  </nav>
 
+    <!-- Line 2 (Links) -->
+    <div class="flex flex-wrap gap-4 mt-2 sm:mt-0 text-sm sm:text-base justify-center sm:justify-end">
+      <a href="#home" class="hover:text-yellow-400 transition-all">🏠 Home</a>
+      <a href="#about" class="hover:text-yellow-400 transition-all">🏨 About</a>
+      <a href="#gallery" class="hover:text-yellow-400 transition-all">🖼️ Gallery</a>
+      <a href="#pricing" class="hover:text-yellow-400 transition-all">💰 Pricing</a>
+      <a href="#booking" class="hover:text-yellow-400 transition-all">📅 Booking</a>
+      <a href="#reviews" class="hover:text-yellow-400 transition-all">🌟 Reviews</a>
+      <a href="#guidelines" class="hover:text-yellow-400 transition-all">📌 Guidelines</a>
+      <a href="#contact" class="hover:text-yellow-400 transition-all">📞 Contact</a>
+    </div>
+  </div>
+</nav>
   <!-- Home Section with Video Background (75% of screen height) -->
   <section id="home" class="relative w-full h-[75vh] overflow-hidden text-white pt-24">
     <!-- Background Video -->
@@ -64,7 +68,7 @@
 
       <!-- Quote -->
       <p class="mt-2 text-lg sm:text-xl italic text-white leading-snug">
-        "Experience comfort in the Queen of Hills.<br>Where warmth meets heritage."
+        "Experience comfort in the Queen of Hills🏔️🌨️.<br>Where warmth meets heritage❤️✨."
       </p>
 
       <!-- Buttons -->
