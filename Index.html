@@ -1,119 +1,155 @@
-<!DOCTYPE html><html lang="en">
+      <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raja Lodge Ooty</title>  <!-- Tailwind CSS CDN -->  <script src="https://cdn.tailwindcss.com"></script>  <!-- AOS Animation -->  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!-- Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@700&family=Merriweather:wght@400;700&family=Poppins&display=swap" rel="stylesheet">  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+  <title>Raja Lodge Ooty</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
     body {
-      font-family: 'Poppins', sans-serif;
-    }
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-    }
-    .lato-heading {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Merriweather', serif;
     }
     .merri-text {
       font-family: 'Merriweather', serif;
     }
-    .glass-navbar {
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
+    .glass-bg {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      padding: 2rem;
     }
-  </style></head><body class="text-white bg-black snap-y snap-mandatory overflow-y-scroll h-screen">  <!-- Navbar (only shows on home section) -->  <header id="home-navbar" class="fixed top-0 left-0 w-full z-50 glass-navbar text-white px-4 py-2">
-    <nav class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-      <div class="text-sm sm:text-base font-extrabold tracking-wider text-center sm:text-left leading-tight">
-        <div>RAJA LODGE OOTY 🏨
-        since 1980</div>
-        <div class="text-xs font-semibold tracking-wide text-yellow-300">Since 1980</div>
-      </div>
-      <div class="flex flex-wrap justify-center sm:justify-end gap-4 mt-1 sm:mt-0 text-xs sm:text-sm font-bold uppercase tracking-widest lato-heading">
-        <a href="#home" class="hover:text-yellow-300">home🏠</a>
-        <a href="#about" class="hover:text-yellow-300">About🏨</a>
-        <a href="#gallery" class="hover:text-yellow-300">Gallery🖼️</a>
-        <a href="#pricing" class="hover:text-yellow-300">Pricing💰</a>
-        <a href="#booking" class="hover:text-yellow-300">Booking📖</a>
-        <a href="#reviews" class="hover:text-yellow-300">Reviews⭐</a>
-        <a href="#guidelines" class="hover:text-yellow-300">Guidelines📌</a>
-        <a href="#contact" class="hover:text-yellow-300">Contact📱</a>
+    html, body {
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- HOME SECTION -->
+  <section id="home" class="relative bg-cover bg-center" style="background-image: url('bg-video-or-image.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+    <!-- NAVIGATION BAR (visible only on home page) -->
+    <nav class="fixed top-0 left-0 w-full bg-transparent text-white z-50 p-4 flex justify-between items-center">
+      <div class="text-xl font-bold">Raja Lodge</div>
+      <div class="space-x-4 hidden sm:flex">
+        <a href="#about" class="hover:text-yellow-300">About</a>
+        <a href="#pricing" class="hover:text-yellow-300">Pricing</a>
+        <a href="#contact" class="hover:text-yellow-300">Contact</a>
       </div>
     </nav>
-  </header>  <!-- Call/WhatsApp Floating Buttons -->  <div class="fixed bottom-6 right-6 z-50 space-y-2">
-    <a href="tel:+919843830181" class="block bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg">📞</a>
-    <a href="https://wa.me/919843830181" target="_blank" class="block bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg">💬</a>
-  </div>  <!-- Sections -->  <section id="home" class="snap-start h-screen relative pt-24">
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
-      <source src="InShot_20250804_105620824.mp4" type="video/mp4" />
-    </video>
-    <div class="flex flex-col items-center justify-center h-full text-center px-4">
-      <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="w-28 h-28 rounded-full border-4 border-white mb-4 mt-6" />
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-yellow-400">Welcome to RAJA LODGE</h1>
-      <p class="mt-2 text-lg sm:text-xl italic text-white leading-snug">
-        "Experience comfort in the Queen of Hills⛰️🌨️.<br>Where warmth meets heritage❤️✨."
+
+    <div class="relative z-10 text-center text-white p-6 mt-20">
+      <h1 class="text-4xl sm:text-6xl font-bold mb-4">Welcome to Raja Lodge, Ooty</h1>
+      <p class="text-lg sm:text-xl">Your home in the Queen of Hills for over 45 years</p>
+      <div class="mt-6 space-x-4">
+        <a href="tel:09843830181" class="bg-yellow-500 text-black px-4 py-2 rounded shadow hover:bg-yellow-400">Call Now</a>
+        <a href="https://wa.me/919843830181" class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-400">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="px-6 sm:px-12 py-12 bg-black">
+    <div class="glass-bg text-white max-w-4xl m-auto">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-300">About Raja Lodge</h2>
+      <p class="text-sm sm:text-base leading-relaxed merri-text">  
+        Established in the heart of Ooty over <strong>45 years ago</strong>, Raja Lodge is one of the oldest and most trusted stays in the Queen of Hills. For decades, we’ve been a favorite among families, couples, and travelers looking for a peaceful, affordable, and convenient place to stay.  
+      </p>  
+      <p class="mt-4 text-sm sm:text-base leading-relaxed merri-text">  
+        Our lodge reflects a blend of <strong>traditional hospitality</strong> and comfort with modern simplicity. Whether you're here for a honeymoon, vacation, or weekend escape, we ensure a clean, safe, and friendly environment for all our guests.  
+      </p>  
+      <p class="mt-4 text-sm sm:text-base leading-relaxed merri-text">  
+        With our long-standing reputation, central location, and personal service, Raja Lodge continues to be the <strong>preferred choice</strong> for those who want to experience Ooty like a local — with the warmth of home and the beauty of the hills right outside your door.  
       </p>
     </div>
   </section>
-    <!-- ABOUT US SECTION -->
-<section id="about" class="snap-start h-screen flex items-center justify-center px-6 bg-cover bg-center" style="background-image: url('image-1.png');">
-  <div class="bg-black bg-opacity-60 p-8 rounded-2xl max-w-4xl text-white text-center shadow-lg">
-    <h2 class="text-3xl font-bold poppins mb-6">About Raja Lodge 🏡</h2>
-    
-    <p class="text-sm sm:text-base leading-relaxed merri-text">  
-      Established in the heart of Ooty over <strong>45 years ago</strong>, Raja Lodge is one of the oldest and most trusted stays in the Queen of Hills. For decades, we’ve been a favorite among families, couples, and travelers looking for a peaceful, affordable, and convenient place to stay.  
-    </p>  
-    
-    <p class="mt-4 text-sm sm:text-base leading-relaxed merri-text">  
-      Our lodge reflects a blend of <strong>traditional hospitality</strong> and comfort with modern simplicity. Whether you're here for a honeymoon, vacation, or weekend escape, we ensure a clean, safe, and friendly environment for all our guests.  
-    </p>  
-    
-    <p class="mt-4 text-sm sm:text-base leading-relaxed merri-text">  
-      With our long-standing reputation, central location, and personal service, Raja Lodge continues to be the <strong>preferred choice</strong> for those who want to experience Ooty like a local — with the warmth of home and the beauty of the hills right outside your door.  
-    </p>
-  </div>
-  </section>
-    <section class="bg-[url('image-4.png')] bg-cover bg-center bg-no-repeat py-10 px-4 sm:px-10">
-  <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 max-w-3xl mx-auto text-white shadow-lg border border-white/20">
-    <h1 class="text-3xl font-bold mb-6 text-center text-yellow-300">Room Pricing</h1>
 
-    <h2 class="text-2xl font-semibold mt-4 mb-2 text-yellow-200">Weekday Rates (Non-Season)<br><span class="text-sm text-gray-200">(Mon - Thurs)</span></h2>
-    <ul class="list-disc list-inside mb-4 text-base leading-relaxed">
+  <!-- PRICING SECTION -->
+  <section id="pricing" class="relative bg-cover bg-center px-6 sm:px-12 py-12 text-white" style="background-image: url('image-4.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative glass-bg max-w-4xl m-auto">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-300">Room Pricing</h2>
+
+      <h3 class="text-2xl font-semibold mt-2 mb-2 text-yellow-200">Weekday Rates<br><span class="text-sm text-gray-200">(Mon - Thurs)</span></h3>
+        <h3 class="text-2xl font-semibold mt-4 mb-2 merri-text">Weekday Rates</h3>
+    <ul class="list-disc list-inside mb-4 merri-text text-sm sm:text-base leading-relaxed">
       <li>Single Person: ₹600</li>
       <li>Standard Room (2 persons): ₹700</li>
       <li>Deluxe Room (2 persons): ₹900</li>
       <li>Triple Bedroom (4 persons): ₹1000</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold mt-4 mb-2 text-yellow-200">Weekend Rates<br><span class="text-sm text-gray-200">(Fri - Sat)</span></h2>
-    <ul class="list-disc list-inside mb-4 text-base leading-relaxed">
+    <h3 class="text-2xl font-semibold mt-4 mb-2 merri-text">Weekend Rates</h3>
+    <ul class="list-disc list-inside mb-4 merri-text text-sm sm:text-base leading-relaxed">
       <li>Single Person: ₹700</li>
       <li>Standard Room (2 persons): ₹900</li>
       <li>Deluxe Room (2 persons): ₹1200</li>
       <li>Triple Bedroom (4 persons): ₹1400</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold mt-4 mb-2 text-yellow-200">Seasonal Pricing<br><span class="text-sm text-gray-200">(Apr 1 - Jun 10, Mon - Thurs)</span></h2>
-    <ul class="list-disc list-inside mb-4 text-base leading-relaxed">
+    <h3 class="text-2xl font-semibold mt-4 mb-2 merri-text">Seasonal Pricing (Apr 1 – Jun 10)</h3>
+    <ul class="list-disc list-inside mb-4 merri-text text-sm sm:text-base leading-relaxed">
       <li>Standard Room (1 person): ₹1000</li>
       <li>Standard Room (2 persons): ₹1200</li>
       <li>Deluxe Room (2 persons): ₹1500</li>
       <li>Triple Bedroom (4 persons): ₹1800</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold mt-4 mb-2 text-yellow-200">Peak Weekends / Holidays<br><span class="text-sm text-gray-200">(Long holiday Friday - Saturday)</span></h2>
-    <ul class="list-disc list-inside mb-6 text-base leading-relaxed">
+    <h3 class="text-2xl font-semibold mt-4 mb-2 merri-text">Peak Weekends / Holidays</h3>
+    <ul class="list-disc list-inside mb-6 merri-text text-sm sm:text-base leading-relaxed">
       <li>Standard Room (1 person): ₹1500</li>
-      <li>Deluxe Room (2 persons): ₹2500</li>
-      <li>Triple Bedroom (4 persons): ₹3200</li>
+      <li>Deluxe Room (2 persons): ₹2300</li>
+      <li>Triple Bedroom (4 persons): ₹2500</li>
     </ul>
 
-    <div class="text-lg font-semibold text-yellow-300">
+    <div class="text-lg font-semibold merri-text">
       🚐 <strong>Tour Package:</strong> Ooty, Coonoor, Filmy Chakkar<br>
-      <span class="text-white">Vehicle: Swaraj Mazda Van</span>
+      Vehicle: Swaraj Mazda Van
     </div>
   </div>
-    </section>
-  </body>
+  </section>
+  
+
+<!-- Contact Section -->
+<section id="contact" class="bg-blue-900 text-white py-16 px-6">
+  <div class="max-w-3xl mx-auto bg-blue-800 bg-opacity-70 p-8 rounded-2xl shadow-lg">
+    <h2 class="text-3xl font-bold text-yellow-300 mb-6 text-center">📞 Get in Touch</h2>
+
+    <p class="mb-4 text-lg"><strong>📱 Phone:</strong> 
+      <a href="tel:+919843830181" class="text-yellow-200 hover:underline">98438 30181</a>, 
+      <a href="tel:+919843676822" class="text-yellow-200 hover:underline">98436 76822</a>
+    </p>
+
+    <p class="mb-4 text-lg"><strong>✉️ Email:</strong> 
+      <a href="mailto:rajalodge1980@gmail.com" class="text-yellow-200 hover:underline">rajalodge1980@gmail.com</a>
+    </p>
+
+    <p class="mb-4 text-lg"><strong>📍 Address:</strong> 
+      5, Mannuvel Pillai Street, Near Bus Stand, Ooty - 643001
+    </p>
+
+    <p class="mb-4 text-lg"><strong>💬 WhatsApp:</strong> 
+      <a href="https://wa.me/9843830181" target="_blank" class="text-yellow-200 hover:underline">Message on WhatsApp</a>
+    </p>
+
+    <p class="mb-4 text-lg"><strong>📍 Google Maps:</strong> 
+      <a href="https://maps.app.goo.gl/VhYH84BMN3KSk7uv6" target="_blank" class="text-yellow-200 hover:underline">
+        View Location on Google Maps
+      </a>
+    </p>
+  </div>
+</section>
+
+</body>
 </html>
