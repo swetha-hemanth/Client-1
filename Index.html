@@ -187,10 +187,85 @@
 </section>
 
 <!-- Reviews Placeholder -->
-<section id="reviews" class="min-h-screen flex items-center justify-center bg-black text-white">
-  <h2 class="text-3xl text-yellow-300">[Reviews Section Coming Soon]</h2>
+
+<section class="min-h-screen bg-black bg-opacity-60 text-white px-4 py-10" style="background-image: url('image-3.png'); background-size: cover; background-position: center;">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">⭐ Guest Reviews</h2>
+
+    <!-- Review Form -->
+    <form id="reviewForm" class="bg-gray-900 bg-opacity-70 rounded-xl p-6 mb-8 shadow-lg">
+      <input id="name" type="text" placeholder="Your Name" class="w-full mb-4 px-4 py-2 rounded bg-gray-800 text-white focus:outline-none" required>
+      
+      <textarea id="comment" rows="3" placeholder="Your Review" class="w-full mb-4 px-4 py-2 rounded bg-gray-800 text-white focus:outline-none" required></textarea>
+
+      <label class="block mb-2 text-sm text-gray-300">Your Rating</label>
+      <select id="rating" class="w-full mb-4 px-4 py-2 rounded bg-gray-800 text-white">
+        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+        <option value="4">⭐⭐⭐⭐ (4)</option>
+        <option value="3">⭐⭐⭐ (3)</option>
+        <option value="2">⭐⭐ (2)</option>
+        <option value="1">⭐ (1)</option>
+      </select>
+
+      <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-full font-semibold w-full">Submit Review</button>
+    </form>
+
+    <!-- Reviews Display -->
+    <h3 class="text-2xl font-semibold mb-4 text-center">📝 Visitor Feedback</h3>
+    <div id="reviewList" class="space-y-6">
+
+      <!-- Sample Reviews -->
+      <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4 shadow">
+        <p class="font-semibold text-lg mb-1 text-yellow-400">⭐⭐⭐⭐⭐</p>
+        <p class="text-white italic mb-2">"Amazing stay! The rooms were clean and the view was breathtaking."</p>
+        <p class="text-sm text-gray-300 text-right">- Priya Sharma</p>
+      </div>
+
+      <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4 shadow">
+        <p class="font-semibold text-lg mb-1 text-yellow-400">⭐⭐⭐⭐</p>
+        <p class="text-white italic mb-2">"Peaceful place in Ooty! Great service and helpful staff."</p>
+        <p class="text-sm text-gray-300 text-right">- Arjun R</p>
+      </div>
+
+      <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4 shadow">
+        <p class="font-semibold text-lg mb-1 text-yellow-400">⭐⭐⭐⭐⭐</p>
+        <p class="text-white italic mb-2">"One of the best budget lodges in town. Highly recommended!"</p>
+        <p class="text-sm text-gray-300 text-right">- Meena Venkatesh</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
+<!-- JS to Add New Reviews -->
+<script>
+  const form = document.getElementById('reviewForm');
+  const reviewList = document.getElementById('reviewList');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+    const rating = document.getElementById('rating').value;
+
+    if (!name || !comment) return;
+
+    const stars = '⭐'.repeat(rating);
+
+    const review = document.createElement('div');
+    review.className = "bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4 shadow";
+
+    review.innerHTML = `
+      <p class="font-semibold text-lg mb-1 text-yellow-400">${stars}</p>
+      <p class="text-white italic mb-2">"${comment}"</p>
+      <p class="text-sm text-gray-300 text-right">- ${name}</p>
+    `;
+
+    reviewList.prepend(review);
+    form.reset();
+  });
+</script>
 <!-- Guidelines Placeholder -->
 <section class="bg-black py-10 px-4 sm:px-8">
   <div class="max-w-3xl mx-auto border-2 border-green-400 rounded-xl shadow-lg p-6 sm:p-10">
@@ -236,47 +311,7 @@
   }
 </style>
 
-    <!-- Location & Room Info -->
-    <div class="mb-6 space-y-3 text-green-400 text-base sm:text-lg font-medium leading-relaxed">
-      <p>🚌 Just 5 minutes walk from Ooty bus stand</p>
-      <p>📺 Rooms equipped with TV for entertainment</p>
-      <p>💧 Hot water facility available</p>
-      <p>🌄 Sightseeing will be arranged by us</p>
-      <p>🤝 Friendly & comfortable hospitality for families</p>
-    </div>
-
-    <!-- Check-in Details -->
-    <div class="mb-6 space-y-3 text-green-400 text-base sm:text-lg font-medium leading-relaxed">
-      <p>🕛 Check-in before 12 PM: 24 hours stay</p>
-      <p>🕑 Check-in after 12 PM (2 PM): Checkout next day by 11 AM</p>
-    </div>
-
-    <!-- Restrictions -->
-    <div class="mb-6 space-y-3 text-green-400 text-base sm:text-lg font-medium leading-relaxed">
-      <p>🚫 Smoking & drinking strictly prohibited</p>
-      <p>🚫 No fire camp facility available</p>
-      <p>🚗 No parking facilities available</p>
-    </div>
-
-    <!-- ID & Guest Rules -->
-    <div class="space-y-3 text-green-400 text-base sm:text-lg font-medium leading-relaxed">
-      <p>🆔 ID card mandatory – Aadhar, Voter ID, or Driving Licence</p>
-      <p>🚫 Unmarried couples not allowed</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Glowing Border Effect -->
-<style>
-  .glowing-border {
-    box-shadow:
-      0 0 10px #22c55e,
-      0 0 20px #22c55e,
-      0 0 30px #22c55e,
-      0 0 40px #22c55e;
-  }
-</style>
+    
 <!-- Contact Placeholder -->
 <section id="contact" class="w-full py-10 px-4 sm:px-6 text-white" style="background: linear-gradient(135deg, #000000, #0a2540); font-family: 'Segoe UI', sans-serif;">
   <div class="max-w-md mx-auto">
