@@ -2,116 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.7" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raja Lodge Ooty</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animation Library -->
+  <!-- AOS Animation CDN -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Custom Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet" />
   <style>
     .gold-text {
       color: gold;
-      font-family: 'Cinzel', serif;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
     }
 
-    /* Logo styling */
-    .logo-border {
-      border: 5px solid white;
-      border-radius: 50%;
-    }
-
-    html, body {
-      scroll-behavior: smooth;
+    body {
+      overflow-x: hidden;
       font-family: 'Segoe UI', sans-serif;
+    }
+
+    .page-border {
+      border: 4px solid white;
+      max-width: 480px;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
     }
   </style>
 </head>
+<body class="bg-black text-white relative">
 
-<body class="text-white relative overflow-x-hidden">
-
-  <!-- Background Video at Original Size -->
-<div class="absolute top-0 left-0 w-full h-full flex justify-center items-center z-[-1] overflow-hidden">
-  <video autoplay muted loop playsinline class="max-w-full max-h-full">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
     <source src="InShot_20250804_105620824.mp4" type="video/mp4" />
   </video>
-</div>
 
-  <!-- Navbar -->
-  <!-- Logo & Navigation Bar -->
-<div class="text-center py-6 px-4 sm:px-8 text-white font-bold text-lg sm:text-xl" style="font-family: 'Comic Sans MS', cursive;">
-  <!-- Logo Title -->
-  <div class="text-3xl sm:text-4xl mb-4">
-    🏨 Raja Lodge since 1980
+  <div class="page-border relative z-10">
+
+    <!-- Navbar -->
+    <nav class="flex flex-col sm:flex-row justify-between items-center px-4 py-2 bg-transparent text-white text-sm sm:text-base">
+      <div class="font-bold">🌟 Raja Lodge</div>
+      <div class="flex flex-wrap justify-center space-x-4 mt-2 sm:mt-0 text-xs sm:text-sm">
+        <a href="#home">🏠 Home</a>
+        <a href="#about">📖 About</a>
+        <a href="#gallery">🖼️ Gallery</a>
+        <a href="#pricing">💰 Pricing</a>
+        <a href="#booking">📝 Booking</a>
+        <a href="#review">🌟 Review</a>
+        <a href="#guidelines">📜 Guidelines</a>
+        <a href="#contact">📞 Contact</a>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="text-center py-10 px-4">
+      <!-- Logo -->
+      <div class="flex justify-center mb-4" data-aos="fade-down">
+        <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo" class="w-24 h-24 rounded-full border-4 border-white">
+      </div>
+
+      <!-- Welcome Text -->
+      <h1 class="text-3xl sm:text-4xl gold-text" data-aos="fade-up">Welcome to RAJA LODGE</h1>
+
+      <!-- Welcome Quote -->
+      <p class="mt-2 text-white text-lg italic" data-aos="fade-up" data-aos-delay="100">
+        “Your peaceful retreat in the heart of Ooty.<br>Experience warmth, comfort, and tradition.”
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-6 flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="tel:+919843830181" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full shadow-lg transition-all duration-300">
+          📞 Call Now
+        </a>
+        <a href="https://wa.me/919843830181" target="_blank" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full shadow-lg transition-all duration-300">
+          💬 WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">About Us</h2>
+      <p class="text-center">
+        Raja Lodge has been serving happy guests in Ooty for over 20 years. With a deep-rooted legacy of hospitality, we promise a cozy stay surrounded by nature.
+      </p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-10 px-4 bg-gray-100 text-black" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">Gallery</h2>
+      <p class="text-center">[Insert images here]</p>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">Pricing</h2>
+      <p class="text-center">[Add pricing table here]</p>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-10 px-4 bg-gray-100 text-black" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">Booking</h2>
+      <p class="text-center">[Insert booking form or details]</p>
+    </section>
+
+    <!-- Review Section -->
+    <section id="review" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">Reviews</h2>
+      <p class="text-center">[Add testimonials here]</p>
+    </section>
+
+    <!-- Guidelines Section -->
+    <section id="guidelines" class="py-10 px-4 bg-gray-100 text-black" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">Guidelines</h2>
+      <p class="text-center">[Add stay rules and tips]</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-10 px-4 bg-white text-black" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+      <p class="text-center">
+        📞 +91 98438 30181<br>
+        📧 rajalodgeooty@example.com
+      </p>
+    </section>
+
   </div>
 
-  <!-- Navigation Links (2 Rows) -->
-  <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-y-3 gap-x-6 text-base sm:text-lg">
-    <!-- Row 1 -->
-    <div class="flex justify-center flex-wrap gap-x-6">
-      <a href="#home" class="hover:scale-105 transition-transform duration-200">🏠 Home</a>
-      <a href="#about" class="hover:scale-105 transition-transform duration-200">📖 About</a>
-      <a href="#gallery" class="hover:scale-105 transition-transform duration-200">🖼️ Gallery</a>
-      <a href="#pricing" class="hover:scale-105 transition-transform duration-200">💸 Pricing</a>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="flex justify-center flex-wrap gap-x-6 mt-3 sm:mt-0">
-      <a href="#booking" class="hover:scale-105 transition-transform duration-200">📝 Booking</a>
-      <a href="#reviews" class="hover:scale-105 transition-transform duration-200">🌟 Reviews</a>
-      <a href="#guidelines" class="hover:scale-105 transition-transform duration-200">📜 Guidelines</a>
-      <a href="#contact" class="hover:scale-105 transition-transform duration-200">📞 Contact</a>
-    </div>
-  </div>
-</div>
-  <!-- Logo Section (2 lines below navbar) -->
-<div class="mt-6 flex justify-center items-center flex-col">
-  <!-- Logo Image with white border and round shape -->
-  <img src="IMG-20250731-WA0005.jpg" alt="Raja Lodge Logo"
-       class="w-32 h-32 rounded-full border-4 border-white shadow-lg" />
-
-  <!-- Welcome Text Below Logo -->
-  <h1 class="mt-4 text-4xl sm:text-5xl font-bold text-[#FFD700]" style="font-family: 'Georgia', serif;">
-    Welcome to RAJA LODGE
-  </h1>
-
-  <!-- Optional Welcome Quote -->
-  <p class="mt-2 text-center text-white text-lg sm:text-xl italic">
-    "Experience comfort in the heart of the Queen of Hills.<br>
-    Your peaceful stay begins here."
-  </p>
-</div>
-
-  <!-- Home Section -->
-  <section id="home" class="h-screen flex flex-col items-center justify-center px-4 text-center pt-32">
-    
-    <!-- Welcome Text -->
-    <h1 class="text-4xl sm:text-5xl font-bold gold-text" data-aos="fade-up">Welcome to RAJA LODGE</h1>
-
-    <!-- Quote -->
-    <p class="mt-6 text-lg sm:text-xl text-white max-w-xl" data-aos="fade-up" data-aos-delay="100">
-      Nestled in the heart of Ooty❤️
-      where comfort meets tradition🏔️✨. <br/>
-      Your peaceful retreat in the Queen of Hills🏔️🌲🌨️.
-    </p>
-
-    <!-- Buttons -->
-    <div class="mt-8 flex space-x-4" data-aos="fade-up" data-aos-delay="200">
-      <a href="tel:+919843830181" class="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-full shadow-lg transition-all duration-300">
-        📞 Call Now
-      </a>
-      <a href="https://wa.me/919843830181" target="_blank" class="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-full shadow-lg transition-all duration-300">
-        💬 WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- Initialize AOS -->
   <script>
     AOS.init();
   </script>
