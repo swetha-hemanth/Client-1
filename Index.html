@@ -2,123 +2,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raja Lodge Ooty</title>  <!-- Tailwind CSS -->  <script src="https://cdn.tailwindcss.com"></script>  <!-- AOS for animation -->  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">  <!-- Font Settings -->  <style>
+  <title>Raja Lodge Ooty</title>  <!-- Tailwind CSS CDN -->  <script src="https://cdn.tailwindcss.com"></script>  <!-- AOS Animation -->  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!-- Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@700&family=Merriweather:wght@400;700&family=Poppins&display=swap" rel="stylesheet">  <style>
     html {
       scroll-behavior: smooth;
     }
     body {
-      margin: 0;
-      background-color: #000;
-      color: white;
       font-family: 'Poppins', sans-serif;
     }
     h1, h2 {
       font-family: 'Playfair Display', serif;
     }
-    .elegant-nav {
-      font-family: 'Playfair Display', serif;
-    }
     .lato-heading {
       font-family: 'Lato', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
     }
     .merri-text {
       font-family: 'Merriweather', serif;
     }
-    nav a:hover {
-      color: gold;
+    .glass-navbar {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
     }
-  </style></head>
-<body class="text-white bg-black"><!-- Navigation Bar --><div id="home-navbar">
-  <nav class="w-full fixed top-0 z-50 text-white px-4 py-2">
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+  </style></head><body class="text-white bg-black snap-y snap-mandatory overflow-y-scroll h-screen">  <!-- Navbar (only shows on home section) -->  <header id="home-navbar" class="fixed top-0 left-0 w-full z-50 glass-navbar text-white px-4 py-2">
+    <nav class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
       <div class="text-sm sm:text-base font-extrabold tracking-wider text-center sm:text-left leading-tight">
-        <div>RAJA LODGE OOTY 🏨</div>
+        <div>RAJA LODGE OOTY 🏨
+        since 1980</div>
         <div class="text-xs font-semibold tracking-wide text-yellow-300">Since 1980</div>
       </div>
-      <div class="flex flex-wrap justify-center sm:justify-end gap-4 mt-1 sm:mt-0 text-xs sm:text-sm font-bold uppercase tracking-widest elegant-nav">
-        <a href="#home">Home🏠</a>
-        <a href="#about">About🏨</a>
-        <a href="#gallery">Gallery🖼️</a>
-        <a href="#pricing">Pricing💰</a>
-        <a href="#booking">Booking📖</a>
-        <a href="#reviews">Reviews⭐</a>
-        <a href="#guidelines">Guidelines📌</a>
-        <a href="#contact">Contact📱</a>
+      <div class="flex flex-wrap justify-center sm:justify-end gap-4 mt-1 sm:mt-0 text-xs sm:text-sm font-bold uppercase tracking-widest lato-heading">
+        <a href="#home" class="hover:text-yellow-300">home🏠</a>
+        <a href="#about" class="hover:text-yellow-300">About🏨</a>
+        <a href="#gallery" class="hover:text-yellow-300">Gallery🖼️</a>
+        <a href="#pricing" class="hover:text-yellow-300">Pricing💰</a>
+        <a href="#booking" class="hover:text-yellow-300">Booking📖</a>
+        <a href="#reviews" class="hover:text-yellow-300">Reviews⭐</a>
+        <a href="#guidelines" class="hover:text-yellow-300">Guidelines📌</a>
+        <a href="#contact" class="hover:text-yellow-300">Contact📱</a>
       </div>
+    </nav>
+  </header>  <!-- Call/WhatsApp Floating Buttons -->  <div class="fixed bottom-6 right-6 z-50 space-y-2">
+    <a href="tel:+919843830181" class="block bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg">📞</a>
+    <a href="https://wa.me/919843830181" target="_blank" class="block bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg">💬</a>
+  </div>  <!-- Sections -->  <section id="home" class="snap-start h-screen relative pt-24">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="InShot_20250804_105620824.mp4" type="video/mp4" />
+    </video>
+    <div class="flex flex-col items-center justify-center h-full text-center px-4">
+      <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="w-28 h-28 rounded-full border-4 border-white mb-4 mt-6" />
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-yellow-400">Welcome to RAJA LODGE</h1>
+      <p class="mt-2 text-lg sm:text-xl italic text-white leading-snug">
+        "Experience comfort in the Queen of Hills⛰️🌨️.<br>Where warmth meets heritage❤️✨."
+      </p>
     </div>
-  </nav>
-</div><script>
-  if (window.location.pathname !== '/' && !window.location.pathname.endsWith('index.html')) {
-    document.getElementById('home-navbar').style.display = 'none';
-  }
-</script><!-- HOME --><section id="home" class="snap-start h-screen relative overflow-hidden pt-24">
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
-    <source src="InShot_20250804_105620824.mp4" type="video/mp4" />
-  </video>
-  <div class="flex flex-col items-center justify-center h-full text-center px-4">
-    <img src="IMG-20250731-WA0005.jpg" alt="Logo" class="w-28 h-28 rounded-full border-4 border-white mb-4" />
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-yellow-400">Welcome to RAJA LODGE</h1>
-    <p class="mt-2 text-lg sm:text-xl italic leading-snug">
-      "Experience comfort in the Queen of Hills🌼. <br>Where warmth meets heritage❤️."
-    </p>
-    <div class="mt-5 flex space-x-4" data-aos="fade-up" data-aos-delay="200">
-      <a href="tel:+919843830181" class="bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-full shadow-lg">📞 Call Now</a>
-      <a href="https://wa.me/919843830181" target="_blank" class="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-full shadow-lg">💬 WhatsApp</a>
+  </section>  <section id="about" class="snap-start h-screen relative flex items-center justify-center px-6 py-16">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('image-1.png');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 max-w-5xl text-white text-center sm:text-left backdrop-blur-sm p-6 sm:p-12 rounded-xl">
+      <h2 class="text-4xl sm:text-5xl mb-6 text-yellow-400 lato-heading">About Raja Lodge, Ooty</h2>
+      <p class="text-sm sm:text-base leading-relaxed merri-text">
+        Raja Lodge has been welcoming guests since <strong>1980</strong>. Nestled in the heart of Ooty, we provide a peaceful stay with modern comfort and traditional hospitality.
+      </p>
     </div>
-  </div>
-</section><!-- ABOUT --><section id="about" class="snap-start min-h-screen relative px-6 py-16 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('image-1.png');"></div>
-  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
-  <div class="relative z-20 max-w-5xl mx-auto text-center sm:text-left backdrop-blur-sm p-6 sm:p-12 rounded-xl">
-    <h2 class="text-4xl sm:text-5xl mb-6 text-yellow-400 lato-heading">About Raja Lodge, Ooty</h2>
-    <p class="merri-text text-base leading-relaxed">Established over <strong>45 years ago</strong>, Raja Lodge is a trusted name in Ooty for families and travelers. We offer traditional hospitality blended with modern comfort.</p>
-    <p class="merri-text text-base leading-relaxed mt-4">From weekend getaways to honeymoons, our clean and safe lodge is your perfect hill-station home.</p>
-    <p class="merri-text text-base leading-relaxed mt-4">Located centrally, with personal care and beautiful surroundings, we ensure you experience Ooty like never before.</p>
-  </div>
-</section><!-- PRICING --><section id="pricing" class="snap-start min-h-screen bg-cover bg-center relative px-4 py-10" style="background-image: url('image-4.png');">
-  <div class="bg-gray-800 bg-opacity-60 backdrop-blur-md rounded-2xl p-8 max-w-3xl w-full text-white shadow-xl mx-auto">
-    <h1 class="text-4xl font-bold mb-6 text-center font-[Playfair]">Room Pricing</h1><h2 class="text-2xl font-semibold mt-4 mb-2">Weekday Rates</h2>
-<ul class="list-disc list-inside mb-4">
-  <li>Single Person: ₹600</li>
-  <li>Standard Room (2 persons): ₹700</li>
-  <li>Deluxe Room (2 persons): ₹900</li>
-  <li>Triple Bedroom (4 persons): ₹1000</li>
-</ul>
-
-<h2 class="text-2xl font-semibold mt-4 mb-2">Weekend Rates</h2>
-<ul class="list-disc list-inside mb-4">
-  <li>Single Person: ₹700</li>
-  <li>Standard Room (2 persons): ₹900</li>
-  <li>Deluxe Room (2 persons): ₹1200</li>
-  <li>Triple Bedroom (4 persons): ₹1400</li>
-</ul>
-
-<h2 class="text-2xl font-semibold mt-4 mb-2">Seasonal Pricing (Apr 1 – Jun 10)</h2>
-<ul class="list-disc list-inside mb-4">
-  <li>Standard Room (1 person): ₹1000</li>
-  <li>Standard Room (2 persons): ₹1200</li>
-  <li>Deluxe Room (2 persons): ₹1500</li>
-  <li>Triple Bedroom (4 persons): ₹1800</li>
-</ul>
-
-<h2 class="text-2xl font-semibold mt-4 mb-2">Peak Weekends / Holidays</h2>
-<ul class="list-disc list-inside mb-6">
-  <li>Standard Room (1 person): ₹1500</li>
-  <li>Deluxe Room (2 persons): ₹2300</li>
-  <li>Triple Bedroom (4 persons): ₹2500</li>
-</ul>
-
-<div class="text-lg font-semibold">
-  🚐 <strong>Tour Package:</strong> Ooty, Coonoor, Filmy Chakkar<br>
-  Vehicle: Swaraj Mazda Van
-</div>
-
-  </div>
-</section><!-- AOS Init --><script>
-  AOS.init();
-</script></body>
+  </section>  <section id="pricing" class="snap-start h-screen flex items-center justify-center px-4">
+    <div class="bg-gray-800 bg-opacity-60 backdrop-blur-md rounded-2xl p-8 max-w-3xl w-full text-white shadow-xl">
+      <h1 class="text-4xl font-bold mb-6 text-center font-[Playfair]">Room Pricing</h1>
+      <ul class="list-disc list-inside mb-4 text-left">
+        <li>Single: ₹600 (Weekday)</li>
+        <li>Standard (2): ₹700 - ₹900</li>
+        <li>Deluxe (2): ₹1200 - ₹1500</li>
+        <li>Triple (4): ₹1400 - ₹2500</li>
+      </ul>
+    </div>
+  </section>  <!-- Add other snap-start sections for gallery, booking, reviews, guidelines, contact -->  <script>
+    // Hide navbar on scroll past home
+    window.addEventListener("scroll", () => {
+      const homeHeight = document.getElementById("home").offsetHeight;
+      const navbar = document.getElementById("home-navbar");
+      if (window.scrollY >= homeHeight - 100) {
+        navbar.style.display = "none";
+      } else {
+        navbar.style.display = "block";
+      }
+    });
+    AOS.init();
+  </script></body>
 </html>
-  
